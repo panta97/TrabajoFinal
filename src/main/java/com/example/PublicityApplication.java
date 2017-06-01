@@ -8,5 +8,6 @@ public class PublicityApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PublicityApplication.class, args);
+		//kevinorh
 	}
 }
