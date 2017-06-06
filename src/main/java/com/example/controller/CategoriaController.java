@@ -54,6 +54,8 @@ public class CategoriaController {
 			}
 			this.categoriaService.save(categoria);
 			return "redirect:/categorias";
+			
+			
 		} catch (Exception e) {
 			model.addAttribute("message", result.toString());
 			return "error";

@@ -12,8 +12,13 @@ public class Servicio {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
+	@JoinColumn(name="idServicio")
 	private Long id;
+	
+	@JoinColumn(name="NombreServicio")
 	private String nombre;
+	
+	@JoinColumn(name="Descripcion")
 	private String descripcion;
 	
 	@ManyToOne
@@ -25,8 +30,19 @@ public class Servicio {
 	private Categoria categoria;
 	
 	public Servicio() {
-		// TODO Auto-generated constructor stub
+		// TODO Auto-generated constructor stub 
 	}
+
+	
+	public Servicio(Long id, String nombre, String descripcion, Empresa empresa, Categoria categoria) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.descripcion = descripcion;
+		this.empresa = empresa;
+		this.categoria = categoria;
+	}
+
 
 	public Long getId() {
 		return id;
