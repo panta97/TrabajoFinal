@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Publicity</title>
+<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet" />
+<link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
+	rel="stylesheet" />
+</head>
+<body>
+
+	<div class="panel panel-default" style="margin: 10px">
+
+		<div class="panel-heading">
+			<h1 class="panel-title">Cateories</h1>
+		</div>
+
+
+		<div class="panel-body">
+			<form class="form-inline" method="POST"
+				th:action="@{/categorias/search}" style="margion: 20px 0">
+				<div class="form-group">
+					<input type="text" class="form-control" name="texto"
+						placeholder="Nombre" />
+					<button type="submit" class="btn btn-primary">Search</button>
+				</div>
+			</form>
+
+			<form class="form-inline" method="POST"
+				th:action="@{/categorias/new}" style="margion: 20px 0">
+				<div class="form-group">
+					<button type="submit" class="btn btn-primary">New</button>
+				</div>
+			</form>
+
+			<table class="table">
+
+				<thead>
+					<tr>
+						<th>Id</th>
+						<th>Nombre</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr th:each="categoria:${categorias}">
+						<td th:text="${categoria.id}"></td>
+						<td th:text="${categoria.nombre}"></td>
+						<td><a th:text="${'/categorias/' + categoria.id}">Editar</a></td>
+					</tr>
+
+				</tbody>
+
+			</table>
+
+
+		</div>
+
+	</div>
+
+	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+
+</body>
+</html>

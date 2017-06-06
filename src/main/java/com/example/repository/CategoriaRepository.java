@@ -7,5 +7,7 @@ import com.example.entity.Categoria;
 
 @Transactional
 public interface CategoriaRepository extends CrudRepository<Categoria, Long>{
-
+	
+	Categoria findByNombre(String name);
+	
 }
