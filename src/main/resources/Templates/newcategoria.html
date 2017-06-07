@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Publicity</title>
+<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet" />
+<link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
+	rel="stylesheet" />
+
+</head>
+<body>
+	<div class="panel panel-default" style="margin: 10px">
+
+		<div class="panel-heading">
+			<h1 class="panel-title">Categorias</h1>
+		</div>
+
+		<div class="panel-body">
+			<form class="form-inline" method="POST" th:action="@{/categorias}"
+				th:object="${categoria}" style="margion: 20px 0">
+				<div class="form-group">
+					<input type="hidden" th:field="*{id}" /> <input type="text"
+						class="form-control" id="nombre" th:field="*{nombre}"
+						placeholder="Nombre" /> <span
+						th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">Name
+						Error</span>
+
+					<button type="submit" class="btn btn-primary">Save</button>
+
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+</html>
