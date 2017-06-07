@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,6 +14,8 @@ public class Categoria {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	
+	
+	@Column(name="NNOMBRE")
 	@Size(min=4, max=45, message="nombre debe tener mas de 4 letras y menos de 45")
 	private String nombre;
 	

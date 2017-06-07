@@ -40,9 +40,9 @@ public class ServicioService implements IServicioService{
 	}
 
 	@Override
-	public List<Servicio> findByServicioCategoria(String nombreCategoria) {
+	public List<Servicio> findByServicioCategoria(String nameCategoria) {
 		// TODO Auto-generated method stub
-		return servicioRepository.findByServicioCategoria(nombreCategoria);
+		return servicioRepository.findByServicioCategoria(nameCategoria);
 	}
 
 }

@@ -49,8 +49,7 @@
 					<tr th:each="servicio:${servicios}">
 					<td th:text="${servicio.id}"></td>
 					<td th:text="${servicio.nombre}"></td>
-					<td th:text="${servicio.categoria.nombre}"></td>
-					<td th:text="${servicio.empresa.nombre}"></td>
+					
 					<td><a th:href="${'/servicios/' + servicio.id}">Edit</a></td>
 					</tr>
 				</tbody>

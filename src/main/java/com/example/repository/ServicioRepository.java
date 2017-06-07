@@ -12,5 +12,5 @@ import com.example.entity.Servicio;
 public interface ServicioRepository extends CrudRepository<Servicio, Long>{
 	
 	@Query("select s from Servicio s where s.categoria.nombre like ?1% or s.nombre like ?1%")
-	List<Servicio> findByServicioCategoria(String nombreCategoria);
+	List<Servicio> findByServicioCategoria(String nameCategoria);
 }

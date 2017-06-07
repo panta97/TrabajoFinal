@@ -68,6 +68,7 @@ public class ServicioController {
 	
 	@PostMapping("/search")
 	public String findAllCategoriaNombre(@RequestParam(name="texto") String texto, Model model){
+		
 		model.addAttribute("servicios", servicioService.findByServicioCategoria(texto));
 		
 		return "listservicio";

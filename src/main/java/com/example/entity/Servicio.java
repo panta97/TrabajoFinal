@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,21 +13,16 @@ public class Servicio {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@JoinColumn(name="idServicio")
 	private Long id;
 	
-	@JoinColumn(name="NombreServicio")
 	private String nombre;
 	
-	@JoinColumn(name="Descripcion")
 	private String descripcion;
 	
 	@ManyToOne
-	@JoinColumn(name="empresa_idEmpresa")
 	private Empresa empresa;
 	
 	@ManyToOne
-	@JoinColumn(name="categoria_idCategoria")
 	private Categoria categoria;
 	
 	public Servicio() {

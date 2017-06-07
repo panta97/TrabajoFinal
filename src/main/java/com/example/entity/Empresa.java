@@ -4,30 +4,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 
 @Entity
 public class Empresa {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@JoinColumn(name="idEmpresa")
 	private Long id;
-	@JoinColumn(name="NNombre")
 	private String nombre;
-	@JoinColumn(name="RazonSocial")
 	private String razonSocial;
-	@JoinColumn(name="RUC")
 	private String ruc;
-	@JoinColumn(name="E_mail")
 	private String email;
-	@JoinColumn(name="Direccion")
 	private String direccion;
-	@JoinColumn(name="Telefono")
 	private String telefono;
-	@JoinColumn(name="PaginaWeb")
 	private String pagWeb;
-	@JoinColumn(name="Contraseña")
 	private String password;
 
 	
@@ -48,11 +38,6 @@ public class Empresa {
 		this.pagWeb = pagWeb;
 		this.password = password;
 	}
-
-
-
-
-
 
 	public Long getId() {
 		return id;
