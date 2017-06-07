@@ -1,6 +1,5 @@
 package com.example.entity;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,9 +19,11 @@ public class Servicio {
 	private String descripcion;
 	
 	@ManyToOne
+	@JoinColumn(name="empresa")
 	private Empresa empresa;
 	
 	@ManyToOne
+	@JoinColumn(name="categoria")
 	private Categoria categoria;
 	
 	public Servicio() {

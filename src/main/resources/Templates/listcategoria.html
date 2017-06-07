@@ -48,6 +48,8 @@
 						<td th:text="${categoria.id}"></td>
 						<td th:text="${categoria.nombre}"></td>
 						<td><a th:href="${'/categorias/' + categoria.id}">Editar</a></td>
+						<td><a th:href="${'/categorias/delete/' + categoria.id}"
+							onclick="return confirm ('Estas seguro???????')">Delete</a></td>
 					</tr>
 
 				</tbody>
